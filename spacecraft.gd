@@ -10,16 +10,18 @@ const COOLDOWN = 8
 @onready var main = get_tree().current_scene
 var Bullet = load("res://bullet.tscn")
 
-func _physics_process(delta):
+func _physics_process(_delta):
+	move_and_slide()
+	velocity.x = move_toward(velocity.x, inputVector.x * MAXSPEED, ACCELEARTION)
+	velocity.y = move_toward(velocity.y, inputVector.y * MAXSPEED, ACCELEARTION)
+
+func _process(delta):
 	inputVector.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 	inputVector.y = Input.get_action_strength("move_up") - Input.get_action_strength("move_down")
 	inputVector = inputVector.normalized()
-	velocity.x = move_toward(velocity.x, inputVector.x * MAXSPEED, ACCELEARTION)
-	velocity.y = move_toward(velocity.y, inputVector.y * MAXSPEED, ACCELEARTION)
 	rotation_degrees.z = velocity.x * -2
 	rotation_degrees.x = velocity.y / 2
 	rotation_degrees.y = -velocity.x / 2
-	move_and_slide()
 	transform.origin.x = clamp(transform.origin.x, -15, 15)
 	transform.origin.y = clamp(transform.origin.y, -10, 10)
 
@@ -35,3 +37,4 @@ func _physics_process(delta):
 	#cooldown
 	if cooldown > 0:
 		cooldown -= delta
+		
