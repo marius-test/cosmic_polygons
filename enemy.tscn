@@ -103,6 +103,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_cjr37")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_egud4"]
+size = Vector3(3.57625, 2.86771, 4.02306)
 
 [node name="Enemy" type="CharacterBody3D" groups=["Enemies"]]
 script = ExtResource("1_0qukd")
@@ -113,5 +114,4 @@ mesh = SubResource("ArrayMesh_4fyyn")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(4, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 shape = SubResource("BoxShape3D_egud4")

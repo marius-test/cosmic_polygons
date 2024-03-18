@@ -10,20 +10,21 @@ emission = Color(0.396078, 0.596078, 1, 1)
 emission_energy_multiplier = 5.0
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hs6kh"]
+radius = 0.446976
+height = 1.85475
 
 [node name="Bullet" type="CharacterBody3D"]
 script = ExtResource("1_1core")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.1, 0, 0, 0, -1.31134e-08, -0.1, 0, 0.3, -4.37114e-09, 0, 0, 0)
+transform = Transform3D(0.2, 0, 0, 0, -2.18557e-08, -0.2, 0, 0.5, -8.74228e-09, 0, 0, 0)
 mesh = SubResource("CapsuleMesh_gjsm6")
 surface_material_override/0 = SubResource("StandardMaterial3D_kyttu")
 
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(0.75, 0, 0, 0, -2.18557e-08, -0.75, 0, 0.5, -3.27835e-08, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_hs6kh")
-disabled = true
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
