@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://cti85piwyhsng"]
+[gd_scene load_steps=11 format=3 uid="uid://cti85piwyhsng"]
 
-[ext_resource type="PackedScene" uid="uid://dwttqe8ch4p4x" path="res://spacecraft.tscn" id="1_6jefq"]
-[ext_resource type="PackedScene" uid="uid://ccvmeq58m5ttq" path="res://enemy_spawn.tscn" id="2_rgh4i"]
+[ext_resource type="PackedScene" uid="uid://dwttqe8ch4p4x" path="res://scenes/spacecraft.tscn" id="1_6jefq"]
+[ext_resource type="PackedScene" uid="uid://ccvmeq58m5ttq" path="res://scenes/enemy_spawn.tscn" id="2_rgh4i"]
 [ext_resource type="Texture2D" uid="uid://cask7cc5hftiu" path="res://assets/environment.png" id="3_utl38"]
+[ext_resource type="AudioStream" uid="uid://bv62aryao15yw" path="res://assets/synthpop_martini_main.wav" id="4_trkhj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2q305"]
 emission_enabled = true
@@ -26,6 +27,20 @@ sky = SubResource("Sky_1b4t4")
 glow_enabled = true
 glow_bloom = 0.2
 
+[sub_resource type="GDScript" id="GDScript_mhscl"]
+script/source = "extends AudioStreamPlayer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
 [node name="Main" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.21217, 5.58613, -0.813081)
 
@@ -46,10 +61,17 @@ speed_scale = 2.0
 mesh = SubResource("SphereMesh_qgcgk")
 emission_shape = 2
 emission_sphere_radius = 50.0
-gravity = Vector3(0, 0, 9.8)
+gravity = Vector3(0, 0, 11)
+scale_amount_min = 0.5
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_tc8jb")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.642788, 0.262003, -0.719846, 0, 0.939693, 0.34202, 0.766044, -0.219846, 0.604023, -30, 10, 30)
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_trkhj")
+volume_db = -10.0
+autoplay = true
+script = SubResource("GDScript_mhscl")
