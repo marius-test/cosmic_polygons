@@ -10,8 +10,8 @@ emission = Color(0.396078, 0.596078, 1, 1)
 emission_energy_multiplier = 5.0
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hs6kh"]
-radius = 0.446976
-height = 1.85475
+radius = 0.630282
+height = 2.40392
 
 [node name="Bullet" type="CharacterBody3D"]
 script = ExtResource("1_vngn0")

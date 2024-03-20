@@ -11,7 +11,10 @@ var inputVector = Vector3()
 var cooldown = 0
 const COOLDOWN = 8
 
-
+@onready var player_explosion = %PlayerExplosion
+@onready var explosion_sound = %ExplosionSound
+@onready var player_mesh = %PlayerMesh
+var has_been_hit = false  # flag to track whether the enemy was hit
 var Bullet = load("res://scenes/bullet.tscn")  # load the bullet scene
 @onready var gun_sound = %GunSound  # sound effect for shooting
 @onready var guns = [$Gun0, $Gun1]  # list of gund nodes
@@ -52,3 +55,24 @@ func _process(delta):
 	#cooldown management
 	if cooldown > 0:
 		cooldown -= delta
+
+func disable_player_mesh():
+	# disables enemy mesh
+	player_mesh.visible = false
+
+func player_explode():
+	# trigger the exploision effect and sound
+	if not has_been_hit:  # run the explosion only once
+		explosion_sound.play()
+		player_explosion.restart()
+		has_been_hit = true
+		disable_player_mesh()
+		await get_tree().create_timer(1.75).timeout
+		queue_free()  # removes the spacecraft from the scene
+
+func _on_area_3d_body_entered(body):
+	# handle collision with other bodies
+	if body.is_in_group("Enemies"):
+		print("Player collision with enemy!")
+		player_explode()
+		body.enemy_explode()

@@ -104,15 +104,15 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_cjr37")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_egud4"]
-size = Vector3(3.57625, 2.86771, 4.02306)
+size = Vector3(4.23757, 3.00075, 4.24981)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3o0me"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qad0b"]
 emission_enabled = true
 emission = Color(0.901961, 0.458824, 0, 1)
 emission_energy_multiplier = 16.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_oxt7e"]
-material = SubResource("StandardMaterial3D_3o0me")
+material = SubResource("StandardMaterial3D_qad0b")
 size = Vector3(0.3, 0.3, 0.3)
 
 [sub_resource type="Curve" id="Curve_k3is7"]
@@ -129,7 +129,9 @@ mesh = SubResource("ArrayMesh_4fyyn")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+unique_name_in_owner = true
 shape = SubResource("BoxShape3D_egud4")
+disabled = true
 
 [node name="EnemyExplosion" type="CPUParticles3D" parent="."]
 unique_name_in_owner = true

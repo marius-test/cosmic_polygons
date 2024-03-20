@@ -8,4 +8,4 @@ func _on_area_3d_body_entered(body):
 	# handle collision with other bodies
 	if body.is_in_group("Enemies"):
 		print("Bullet hit an enemy!")
-		body.explode()  # trigger enemy explosion
+		body.enemy_explode()  # trigger enemy explosion
