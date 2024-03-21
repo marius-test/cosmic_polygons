@@ -26,10 +26,15 @@ func enemy_explode():
 	if not has_been_hit:  # run the explosion only once
 		explosion_sound.play()
 		enemy_explosion.restart()
-		has_been_hit = true
 		disable_enemy_mesh()
+		call_deferred("disable_collision")
+		has_been_hit = true
 		await get_tree().create_timer(1.75).timeout
 		queue_free()  # removes the enemy from the scene
+
+func disable_collision():
+	if collision_shape_3d:
+		collision_shape_3d.set_disabled(true)
 
 func enable_collision():
 	if collision_shape_3d:

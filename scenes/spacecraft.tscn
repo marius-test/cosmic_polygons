@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://dwttqe8ch4p4x"]
 
 [ext_resource type="Script" path="res://scripts/spacecraft.gd" id="1_7i2he"]
-[ext_resource type="Texture2D" uid="uid://bqjr241oojpf4" path="res://assets/crosshair3w_256x256_mb.png" id="2_g8ie7"]
+[ext_resource type="Texture2D" uid="uid://cou0egusoywrt" path="res://assets/crosshair5.1w_256x256_mb.png" id="2_uwlhg"]
 [ext_resource type="AudioStream" uid="uid://dmljd1m3it5p0" path="res://assets/retro-laser-gun-shot.wav" id="3_6wfvo"]
 [ext_resource type="AudioStream" uid="uid://cixnlf40w3kyf" path="res://assets/retro-explosion.wav" id="4_nqclm"]
 
@@ -183,7 +183,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3, -0.409, -0.433)
 [node name="Crosshair" type="Sprite3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, -50)
 texture_filter = 0
-texture = ExtResource("2_g8ie7")
+texture = ExtResource("2_uwlhg")
 
 [node name="ThrusterParticles" type="CPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.52564)

@@ -19,6 +19,7 @@ var Bullet = load("res://scenes/bullet.tscn")  # load the bullet scene
 @onready var gun_sound = %GunSound  # sound effect for shooting
 @onready var guns = [$Gun0, $Gun1]  # list of gund nodes
 @onready var main = get_tree().current_scene  # reference to the main scene
+signal game_over  # flag to track game status
 
 func _physics_process(_delta):
 	move_and_slide()  # moves the player using slide collision
@@ -73,6 +74,6 @@ func player_explode():
 func _on_area_3d_body_entered(body):
 	# handle collision with other bodies
 	if body.is_in_group("Enemies"):
-		print("Player collision with enemy!")
 		player_explode()
 		body.enemy_explode()
+		emit_signal("game_over")
