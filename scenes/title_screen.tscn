@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=3 uid="uid://dhhqodogpfkmr"]
+
+[ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_0p0ob"]
+[ext_resource type="Texture2D" uid="uid://bmdhx0lococcm" path="res://assets/Starfield_07-512x512-pixel25.png" id="1_5q5kj"]
+[ext_resource type="Texture2D" uid="uid://bx8wmfvhweih0" path="res://assets/cosmic_polygons_logo.png" id="2_auha5"]
+[ext_resource type="FontFile" uid="uid://yep7tr3pfibr" path="res://fonts/BebasNeue-Regular.ttf" id="3_qpv06"]
+[ext_resource type="AudioStream" uid="uid://bv62aryao15yw" path="res://assets/synthpop_martini_main.wav" id="5_6ad05"]
+
+[node name="TitleScreen" type="Node"]
+script = ExtResource("1_0p0ob")
+
+[node name="Background" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_5q5kj")
+stretch_mode = 1
+
+[node name="Logo" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -583.0
+offset_top = -59.5
+offset_right = 583.0
+offset_bottom = 59.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_auha5")
+
+[node name="Start" type="Button" parent="."]
+texture_filter = 1
+anchors_preset = -1
+anchor_left = 0.513
+anchor_top = 0.161
+anchor_right = 0.513
+anchor_bottom = 0.161
+offset_left = -92.96
+offset_top = 484.12
+offset_right = 44.04
+offset_bottom = 576.12
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_qpv06")
+theme_override_font_sizes/font_size = 70
+text = "START"
+flat = true
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_6ad05")
+autoplay = true
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
