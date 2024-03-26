@@ -8,4 +8,6 @@ Retro laser sound and retro explosion sound provided for free by *MATRIXXX_* at 
 
 Music purchased by me at [Ovani Sound](https://ovanisound.com/).
 
-The rest of the assests provided/crafted by *Master Albert* in his **excellent** tutorial.
+Logo created by me on a free website.
+
+The rest of the assests (background image, player/enemy models) provided/created by *Master Albert* in his **excellent** tutorial.
