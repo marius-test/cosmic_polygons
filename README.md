@@ -7,7 +7,3 @@ Videogame based on the tutorial provided by *Master Albert* on [YouTube](https:/
 Retro laser sound and retro explosion sound provided for free by *MATRIXXX_* at [Freesound](https://freesound.org/people/MATRIXXX_/).
 
 Music purchased by me at [Ovani Sound](https://ovanisound.com/).
-
-Logo created by me on a free website.
-
-The rest of the assests (background image, player/enemy models) provided/created by *Master Albert* in his **excellent** tutorial.
