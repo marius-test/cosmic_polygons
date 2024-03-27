@@ -86,6 +86,7 @@ light_energy = 2.0
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_trkhj")
 volume_db = -10.0
+autoplay = true
 script = SubResource("GDScript_mhscl")
 
 [node name="GameOverText" type="Sprite3D" parent="."]

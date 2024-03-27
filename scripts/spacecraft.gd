@@ -28,7 +28,6 @@ func _physics_process(_delta):
 	velocity.x = move_toward(velocity.x, inputVector.x * MAXSPEED, ACCELEARTION)
 	velocity.y = move_toward(velocity.y, inputVector.y * MAXSPEED, ACCELEARTION)
 
-func _process(delta):
 	# handle player controls
 	inputVector.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 	inputVector.y = Input.get_action_strength("move_up") - Input.get_action_strength("move_down")
@@ -43,6 +42,7 @@ func _process(delta):
 	transform.origin.x = clamp(transform.origin.x, -15, 15)
 	transform.origin.y = clamp(transform.origin.y, -10, 10)
 
+func _process(delta):
 	# shooting logic
 	if Input.is_action_pressed("shoot") and cooldown <= 0:
 		cooldown = COOLDOWN * delta

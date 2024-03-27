@@ -190,6 +190,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.52564)
 amount = 100
 lifetime = 2.0
 speed_scale = 1.5
+local_coords = true
 mesh = SubResource("BoxMesh_roabm")
 emission_shape = 1
 emission_sphere_radius = 1.0
