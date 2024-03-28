@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6a8kdq5eq6lg"]
+
+[ext_resource type="PackedScene" uid="uid://c8y12arxjr1v1" path="res://assets/Low_Poly_Spaceship_001.glb" id="1_p45lh"]
+
+[node name="Low_Poly_Spaceship_0012" instance=ExtResource("1_p45lh")]

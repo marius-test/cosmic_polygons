@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 @onready var collision_shape_3d = %CollisionShape3D
-@onready var enemy_mesh = %EnemyMesh
+@onready var asteroid_mesh = %AsteroidMesh
 @onready var explosion_sound = %ExplosionSound
 @onready var enemy_explosion = %EnemyExplosion
 var enemy_speed = randi_range(20, 50)
@@ -17,16 +17,16 @@ func _process(_delta):
 	if transform.origin.z > 30:
 		queue_free()  # removes the enemy from the scene when it is out of bounds
 
-func disable_enemy_mesh():
+func disable_asteroid_mesh():
 	# disables enemy mesh
-	enemy_mesh.visible = false
+	asteroid_mesh.visible = false
 
 func enemy_explode():
 	# trigger the exploision effect and sound
 	if not has_been_hit:  # run the explosion only once
 		explosion_sound.play()
 		enemy_explosion.restart()
-		disable_enemy_mesh()
+		disable_asteroid_mesh()
 		call_deferred("disable_collision")
 		has_been_hit = true
 		await get_tree().create_timer(1.75).timeout

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bbd0hrblwguph"
-path="res://.godot/imported/enemy.gltf-9e5c9f43877dadc666a821b5b0f48f8a.scn"
+uid="uid://c1pao1gft6bl7"
+path="res://.godot/imported/low_poly_asteroids.glb-6dfd81293b160818527d87abd923ce14.scn"
 
 [deps]
 
-source_file="res://assets/enemy.gltf"
-dest_files=["res://.godot/imported/enemy.gltf-9e5c9f43877dadc666a821b5b0f48f8a.scn"]
+source_file="res://assets/low_poly_asteroids.glb"
+dest_files=["res://.godot/imported/low_poly_asteroids.glb-6dfd81293b160818527d87abd923ce14.scn"]
 
 [params]
 
