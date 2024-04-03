@@ -3,13 +3,12 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bu8qk"]
 resource_name = "Low_Poly_Spaceship_001_Mat_01"
 cull_mode = 2
-albedo_color = Color(1, 1, 1, 1)
 roughness = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2a7ow"]
 resource_name = "Low_Poly_Spaceship_001_Mat_02"
 cull_mode = 2
-albedo_color = Color(1, 0.276351, 0, 1)
+albedo_color = Color(1, 0.0431373, 0, 1)
 roughness = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ar277"]
@@ -27,7 +26,7 @@ roughness = 0.5
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2orp8"]
 resource_name = "Low_Poly_Spaceship_001_Mat_05"
 cull_mode = 2
-albedo_color = Color(0, 1, 0.701458, 1)
+albedo_color = Color(0, 1, 1, 1)
 roughness = 0.5
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_d5506"]

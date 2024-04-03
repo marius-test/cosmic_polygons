@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dhhqodogpfkmr"]
 
 [ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_0p0ob"]
-[ext_resource type="Texture2D" uid="uid://bmdhx0lococcm" path="res://assets/Starfield_07-512x512-pixel25.png" id="1_5q5kj"]
+[ext_resource type="Texture2D" uid="uid://nvcqop01myc3" path="res://assets/Starfield_08-512x512.png" id="2_6nyl1"]
 [ext_resource type="Texture2D" uid="uid://bx8wmfvhweih0" path="res://assets/cosmic_polygons_logo.png" id="2_auha5"]
 [ext_resource type="FontFile" uid="uid://yep7tr3pfibr" path="res://fonts/BebasNeue-Regular.ttf" id="3_qpv06"]
 [ext_resource type="AudioStream" uid="uid://bv62aryao15yw" path="res://assets/synthpop_martini_main.wav" id="5_6ad05"]
@@ -16,7 +16,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_5q5kj")
+texture = ExtResource("2_6nyl1")
 stretch_mode = 1
 
 [node name="Logo" type="TextureRect" parent="."]
