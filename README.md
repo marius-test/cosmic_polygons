@@ -2,8 +2,10 @@
 
 A simple 3D space shooter videogame in **Godot Engine 4**.
 
-Videogame based on the tutorial provided by *Master Albert* on [YouTube](https://www.youtube.com/watch?v=t_zN-7Xggw4), but **highly modified** and **improved** by me.
+Player model by *Emerald Eel Entertainment* at [itch.io](https://emerald-eel-entertainment.itch.io/low-poly-spaceship-asset-pack-001).
 
-Retro laser sound and retro explosion sound provided for free by *MATRIXXX_* at [Freesound](https://freesound.org/people/MATRIXXX_/).
+Asteroid model by *albert_busico* at [Sketchfab](https://sketchfab.com/3d-models/ps1-style-low-poly-asteroids-994740be63754d76ad4988f05f9cd6f1).
 
-Music purchased by me at [Ovani Sound](https://ovanisound.com/).
+Retro laser sound and retro explosion sound by *MATRIXXX_* at [Freesound](https://freesound.org/people/MATRIXXX_/).
+
+Music acquired by me at [Ovani Sound](https://ovanisound.com/).
