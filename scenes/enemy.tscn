@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://pic747etnf3q"]
 
-[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_j3w5a"]
+[ext_resource type="Script" uid="uid://bhyevs61gka0d" path="res://scripts/enemy.gd" id="1_j3w5a"]
 [ext_resource type="AudioStream" uid="uid://cixnlf40w3kyf" path="res://assets/retro-explosion.wav" id="2_nbapd"]
 [ext_resource type="ArrayMesh" uid="uid://7ui2sgdwoec2" path="res://assets/asteroid 01_008.tres" id="3_es5bv"]
 

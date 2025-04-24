@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://dwttqe8ch4p4x"]
 
-[ext_resource type="Script" path="res://scripts/spacecraft.gd" id="1_7i2he"]
+[ext_resource type="Script" uid="uid://c82r28f3ygi3" path="res://scripts/spacecraft.gd" id="1_7i2he"]
 [ext_resource type="ArrayMesh" uid="uid://bekr8vu42x6en" path="res://assets/low_poly_spaceship_001_mesh.tres" id="2_2oy8b"]
 [ext_resource type="Texture2D" uid="uid://cou0egusoywrt" path="res://assets/crosshair5.1w_256x256_mb.png" id="2_uwlhg"]
 [ext_resource type="AudioStream" uid="uid://dmljd1m3it5p0" path="res://assets/retro-laser-gun-shot.wav" id="3_6wfvo"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://cti85piwyhsng"]
 
 [ext_resource type="PackedScene" uid="uid://dwttqe8ch4p4x" path="res://scenes/spacecraft.tscn" id="1_6jefq"]
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_bm1cm"]
+[ext_resource type="Script" uid="uid://ccg7reeegy182" path="res://scripts/game_manager.gd" id="1_bm1cm"]
 [ext_resource type="PackedScene" uid="uid://ccvmeq58m5ttq" path="res://scenes/enemy_spawn.tscn" id="2_rgh4i"]
 [ext_resource type="Texture2D" uid="uid://c2kn3nadbocks" path="res://assets/panorama_stars.png" id="4_sfvck"]
 [ext_resource type="AudioStream" uid="uid://bv62aryao15yw" path="res://assets/synthpop_martini_main.wav" id="4_trkhj"]
